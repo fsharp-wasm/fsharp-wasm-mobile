@@ -1,0 +1,267 @@
+{
+  "about": "The device API catalogue: the single source of docs/apis.md (node tools/catalogue.mjs writes it, --check says whether it is current). Every status is 'planned' until code and a measurement exist.",
+  "priorities": {
+    "P1": "what almost every application needs",
+    "P2": "common, with a permission or a native part that matters",
+    "P3": "specialised",
+    "TV": "television targets, later"
+  },
+  "apis": [
+    {
+      "id": "storage",
+      "title": "Files and key-value storage",
+      "web": "IndexedDB, OPFS, localStorage",
+      "native": "files in the app's own directory; survives clearing the web view's data",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "secure-storage",
+      "title": "Secure storage (Keychain, Keystore, Credential Locker)",
+      "web": null,
+      "native": "hardware-backed secrets",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "lifecycle",
+      "title": "App lifecycle: pause, resume, back button, memory warning",
+      "web": "visibilitychange, pagehide, freeze",
+      "native": "the back button of Android, memory warnings, state restoration",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "deep-links",
+      "title": "Deep links and universal links",
+      "web": "location, history",
+      "native": "the OS hands the app a URL",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "share",
+      "title": "Share sheet",
+      "web": "Web Share API",
+      "native": "the native share sheet and share targets (receiving)",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "clipboard",
+      "title": "Clipboard",
+      "web": "Async Clipboard API",
+      "native": "clipboard without a user gesture where the OS allows it",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "haptics",
+      "title": "Haptic feedback",
+      "web": "Vibration API (not on every platform)",
+      "native": "impact, selection and notification feedback of the OS",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "safe-area",
+      "title": "Safe area, status bar, orientation, keyboard insets",
+      "web": "env(safe-area-inset-*), Screen Orientation",
+      "native": "status bar style, orientation lock, the keyboard's height",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "device-info",
+      "title": "Device and OS information",
+      "web": "userAgentData, a few properties",
+      "native": "model, OS version, locale, battery, free space",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "network",
+      "title": "Network status and type",
+      "web": "navigator.onLine, Network Information (partial)",
+      "native": "connection type, metered, reachability events",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "permissions",
+      "title": "Permission state and requests",
+      "web": "Permissions API (partial)",
+      "native": "the OS prompts and the settings page",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "open-url",
+      "title": "Open a URL in the system browser or another app",
+      "web": "window.open",
+      "native": "a custom tab, another app by scheme",
+      "priority": "P1",
+      "status": "planned"
+    },
+    {
+      "id": "notifications-local",
+      "title": "Local notifications",
+      "web": "Notifications API (partial on mobile)",
+      "native": "scheduled notifications, channels, badges",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "push",
+      "title": "Push notifications",
+      "web": "Push API (partial)",
+      "native": "APNs and FCM tokens, silent pushes",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "camera",
+      "title": "Camera and photo library",
+      "web": "getUserMedia, <input capture>",
+      "native": "the OS picker, saving to the library",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "files",
+      "title": "File picker and save dialog",
+      "web": "File System Access API (partial), <input type=file>",
+      "native": "the OS document picker and share-to-files",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "geolocation",
+      "title": "Location, including background",
+      "web": "Geolocation API",
+      "native": "background updates, significant-change, geofences",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "biometrics",
+      "title": "Biometric and device-credential unlock",
+      "web": "WebAuthn (passkeys)",
+      "native": "local authentication that gates the app or a secret",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "keep-awake",
+      "title": "Keep the screen on",
+      "web": "Screen Wake Lock API",
+      "native": "the same, where the web view lacks the API",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "media-session",
+      "title": "Media controls, lock screen, audio session",
+      "web": "Media Session API",
+      "native": "audio focus, background audio, remote commands",
+      "priority": "P2",
+      "status": "planned"
+    },
+    {
+      "id": "sensors",
+      "title": "Motion, orientation, compass",
+      "web": "DeviceMotion, DeviceOrientation, Generic Sensor (partial)",
+      "native": "the same without a permission dance in each web view",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "bluetooth",
+      "title": "Bluetooth LE",
+      "web": "Web Bluetooth (not on iOS)",
+      "native": "CoreBluetooth and the Android stack",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "nfc",
+      "title": "NFC",
+      "web": "Web NFC (Android only)",
+      "native": "reading and writing tags on both OSes",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "background-tasks",
+      "title": "Background work",
+      "web": null,
+      "native": "scheduled and long-running tasks within the OS's limits",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "in-app-purchase",
+      "title": "In-app purchases and subscriptions",
+      "web": null,
+      "native": "StoreKit and Play Billing",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "sign-in",
+      "title": "Sign in with Apple, Google",
+      "web": null,
+      "native": "the native sign-in sheets",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "contacts-calendar",
+      "title": "Contacts and calendar",
+      "web": "Contact Picker (Android, partial)",
+      "native": "reading and writing, with the OS permission",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "speech",
+      "title": "Speech recognition and synthesis",
+      "web": "Web Speech API (partial)",
+      "native": "on-device recognition",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "print",
+      "title": "Printing and PDF export",
+      "web": "window.print",
+      "native": "the native print dialog from a document",
+      "priority": "P3",
+      "status": "planned"
+    },
+    {
+      "id": "tv-remote",
+      "title": "Remote control keys: D-pad, back, play/pause, colour keys",
+      "web": "KeyboardEvent (varies by TV)",
+      "native": "media and colour keys the web view does not deliver",
+      "priority": "TV",
+      "status": "planned"
+    },
+    {
+      "id": "tv-focus",
+      "title": "Spatial navigation: focus that follows the D-pad",
+      "web": "CSS spatial navigation (not shipped broadly)",
+      "native": "a focus model for apps without a pointer (shared with the editors' roving focus)",
+      "priority": "TV",
+      "status": "planned"
+    },
+    {
+      "id": "tv-display",
+      "title": "10-foot UI: overscan, safe margins, resolution",
+      "web": "media queries, a few",
+      "native": "display modes, HDR, frame-rate matching",
+      "priority": "TV",
+      "status": "planned"
+    }
+  ]
+}

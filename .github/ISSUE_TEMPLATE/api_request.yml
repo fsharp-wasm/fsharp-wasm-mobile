@@ -1,0 +1,31 @@
+name: 🔌 API request
+description: A device API that is not in the catalogue, or a row of it that is wrong
+labels: [api, good first issue]
+body:
+  - type: markdown
+    attributes:
+      value: The catalogue is [`apis.json`](https://github.com/fsharp-wasm/fsharp-wasm-mobile/blob/develop/apis.json); [docs/apis.md](https://github.com/fsharp-wasm/fsharp-wasm-mobile/blob/develop/docs/apis.md) is generated from it. A pull request that changes the row is welcome.
+  - type: input
+    id: api
+    attributes:
+      label: Which device API?
+      placeholder: haptics, secure storage, NFC, a TV remote key…
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: What do you build that needs it?
+    validations:
+      required: true
+  - type: textarea
+    id: web
+    attributes:
+      label: What does the web already give you, and where does it fall short?
+      description: Which browsers and web views you tried.
+  - type: dropdown
+    id: targets
+    attributes:
+      label: Where
+      multiple: true
+      options: [iOS, Android, Television, Desktop]

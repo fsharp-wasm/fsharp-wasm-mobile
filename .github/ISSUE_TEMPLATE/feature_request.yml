@@ -1,0 +1,19 @@
+name: 🚀 Feature request
+description: Something this repository should do
+labels: [enhancement]
+body:
+  - type: textarea
+    id: use
+    attributes:
+      label: What do you need it for?
+      description: The use case first; the proposal follows from it.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: How could it work?
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What else did you consider, and what exists elsewhere?

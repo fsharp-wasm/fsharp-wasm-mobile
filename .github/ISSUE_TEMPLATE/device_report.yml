@@ -1,0 +1,28 @@
+name: 📱 Device report
+description: Tell us what a device or its web view can run (no code needed)
+labels: [device-report, good first issue]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open the **probe** of [fsharp-wasm-embedded](https://github.com/fsharp-wasm/fsharp-wasm-embedded/tree/develop/probe) on the device (`probe/index.html`: serve the folder and open it, or copy the file),
+        press **Copy report** and paste it below. It checks the WebAssembly features the compiler's modules need and the web APIs the runtime and the device APIs use. Nothing leaves the page.
+  - type: input
+    id: device
+    attributes:
+      label: Device and OS version
+      placeholder: Samsung Galaxy A54, Android 14 / iPhone 13, iOS 18.2 / LG C2, webOS 22
+    validations:
+      required: true
+  - type: input
+    id: engine
+    attributes:
+      label: Browser or web view, with its version
+      description: For an app, the web view it uses (Android System WebView, WKWebView, WebView2, WebKitGTK).
+  - type: textarea
+    id: report
+    attributes:
+      label: The report
+      render: json
+    validations:
+      required: true

@@ -1,0 +1,28 @@
+name: 🐛 Bug report
+description: Something here does not do what it says
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce it
+      description: The smallest set of steps, or a program. A reproduction becomes a test.
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Device, OS version and web view or browser
+      placeholder: Pixel 8, Android 15, System WebView 131
+  - type: textarea
+    id: report
+    attributes:
+      label: Device report (optional)
+      description: Run the probe of fsharp-wasm-embedded on the device and paste its report.
+      render: json

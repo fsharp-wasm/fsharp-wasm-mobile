@@ -1,0 +1,12 @@
+{
+  "name": "fsharp-wasm-mobile",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The device APIs of the fsharp-wasm platform: typed F# modules, web-first glue and native implementations behind one bridge contract.",
+  "type": "module",
+  "scripts": {
+    "catalogue": "node tools/catalogue.mjs",
+    "test": "node tools/catalogue.mjs --check"
+  },
+  "license": "Apache-2.0"
+}

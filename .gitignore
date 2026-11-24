@@ -1,0 +1,21 @@
+# Node
+/node_modules/
+
+# Build output
+/dist/
+/out/
+
+# Native toolchains (when the hosts arrive)
+/target/
+/build/
+*.xcworkspace/xcuserdata/
+.gradle/
+*.apk
+*.aab
+*.ipa
+
+# Editors and the system
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json

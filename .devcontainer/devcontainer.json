@@ -1,0 +1,6 @@
+{
+  "name": "fsharp-wasm-mobile",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "node tools/catalogue.mjs --check",
+  "customizations": { "vscode": { "extensions": ["editorconfig.editorconfig"] } }
+}

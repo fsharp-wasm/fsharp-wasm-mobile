@@ -1,5 +1,9 @@
 # fsharp-wasm-mobile
 
+<!-- status -->
+[![CI](https://github.com/fsharp-wasm/fsharp-wasm-mobile/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/fsharp-wasm/fsharp-wasm-mobile/actions/workflows/ci.yml) · [Status of every repository](https://fsharp-wasm.github.io/status/)
+<!-- /status -->
+
 <!-- platform -->
 > **Part of the [fsharp-wasm platform](https://fsharp-wasm.github.io/projects/)**: device APIs. Builds on [runtime](https://github.com/fsharp-wasm/fsharp-wasm-runtime), is hosted by [embedded](https://github.com/fsharp-wasm/fsharp-wasm-embedded). Status: **planned, no code yet**.
 > [All projects](https://fsharp-wasm.github.io/projects/) · [Roadmap](https://fsharp-wasm.github.io/docs/roadmap/) · [Tests](https://fsharp-wasm.github.io/tests/) · [Benchmarks](https://fsharp-wasm.github.io/benchmarks/) · [Live demos](https://fsharp-wasm.github.io/demos/)
